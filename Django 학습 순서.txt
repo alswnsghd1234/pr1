@@ -1,0 +1,42 @@
+
+1. setting.py 안의
+	installed_app에 생성한 디렉토리(게시판 , 유저) 입력
+
+2. user 디렉토리에서
+	models.py 작성
+
+3. pr_community안에 vs code 안의 git bash로 들어감
+	python manage.py migrations  입력 실행
+	user 
+4. models.py에 클래스 선언
+	models.py 파일 예시
+
+	from django.db import models
+
+
+	class Bookmark(models.Model):
+		title = models.CharField(max_length=100, blank=True, null=True)
+		url = models.URLField('url', unique=True)
+
+		class Meta:
+			verbose_name = '북마크'
+			verbose_name_plural = '북마크 모음'
+			ordering = ['title', ]
+
+		def __str__(self):
+			return self.title
+			
+## verbose_name 옵션
+## 사용자가 읽기 쉬운 모델 객체의 이름으로 관리자 화면 등에서 표시된다. 영어를 기준으로 단수형이다.
+
+## verbose_name 옵션을 지정하지 않으면 CamelCase 클래스 이름을 기준으로 camel case 이와 같이 모두 소문자로 변경한다.
+
+5. python manage.py makemigrations
+   python manage.py migrate
+   # setting지에 있떤 앱들을 자동으로 생성!!
+   ㄴ db.sqlite3 생성됨!! setting.py DATABASE 클래스에 적혀있따!
+   
+    vs code 안의 git bash로 sqlite 연결하려면
+    extension으로 sqlite 설치 후, 음... 컨톨 쉬프 피 누른담에.. 열고 싶은 db 클릭!
+	ㄴ 그 후 탐색기가서 맨아래 보면 sqlite explorer 생성되어 있음.\
+	

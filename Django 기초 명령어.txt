@@ -1,0 +1,41 @@
+
+
+가상환경 만들기
+
+1.CLI 에서 설치 할 경로 설정
+2.python -m venv 디렉토리명
+3.cd 방금 생성한 디렉토리명
+4. ./Scripts/activate.bat
+ -- end -- 
+ 
+Django 시작하기
+
+1. 서버 시작하기
+$ python manage.py runserver 8080	기본 웹 서버는 8000 포트를 기본으로 동작한다. 변경하고 싶다면 포트 번호를 적어준다.
+$ python manage.py runserver 0.0.0.0:8000	IP를 직접 지정하거나 같은 네트워크 망 안에서 접속이 가능하도록 할 때 왼쪽과 같이 적어준다.
+$ python manage.py runserver 0:8000	0은 0.0.0.0의 약어이다. 해당 형태로 동작을 시킬 때는 settings.py에 있는 ALLOWED_HOSTS를 설정해 준다.
+서버를 실행 후 종료를 하기 위해서는 [Ctrl+C]를 누르면 된다.
+
+2. 기본 명령어 정리
+$ django-admin startproject 프로젝트이름
+장고 프로젝트를 만드는 명령이다. 장고를 설치 후에 위와 같이 명령어를 치면 프로 젝트가 생성된다. 아래와 같이 뒤에 .을 붙여주면 새로운 파일에서 프로젝트가 생성되는 것이 아니라 현재 파일에서 프로젝트가 생성된다.
+
+$ django-admin startproject 프로젝트이름 .
+ 
+$ python manage.py startapp 앱이름
+프로젝트에 기능 단위인 앱을 새로 만들 때 사용한다.
+
+$ python manage.py makemigrations	어플리케이션의 변경 사항을 추적에 DB에 적용할 내용을 정리한다. 보통 모델의 변경 사항이 있을 때 주로 사용한다.
+$ python manage.py migrate	실제 변경사항을 DB에 반영한다.
+$ python manage.py showmigrations	DB 변경사항 목록과 상태를 출력한다.
+$ python manage.py createsuperuser	관리자 계정을 생성한다.
+$ python manage.py changepassword	계정의 비밀번호를 변경할 수 있다.
+ 
+$ python manage.py sqlmigrate	실행할 SQL 명령문을 출력한다. 어떤 명령문을 실행할지 확인할 떄 사용하고, 튜닝이 안된 쿼리나 슬로우 쿼리 여부를 확인할 수 있다.
+$ python manage.py dumpdata	현재 DB의 내용을 백업할 때 사용한다.
+$ python manage.py loaddata	백업 파일에서 DB로 내용을 복구 할 때 사용한다.
+$ python manage.py flush	DB 테이블은 그대로 두고 테이블의 내용만 전부 삭제한다.
+$ python manage.py shell	장소 쉘(shell)을 실행한다. 작성한 모델 등을 불러와 실제로 테스트를 해볼 수 있다.
+$ python manage.py dbshell	DB에 직접 접근할 수 있는 쉘을 실행한다. 장고 어플리케이션에 문제가 있어 관리자 페이지에 접근할 수 없을 때 보통 shell을 이용해 DB를 수정하는데 SQL 구문을 이용해 직접 수정하고 싶다면 dbshell을 이용할 수 있다.
+
+
