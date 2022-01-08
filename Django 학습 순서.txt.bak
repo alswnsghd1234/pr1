@@ -66,12 +66,6 @@
 
 	admin.site.register(Pruser, PruserAdmin)
 	
-------------알면 유용한 꿀팁 -----------
-html 파일이 dj로 나올 때 설정에 들어가서 파일 > Files: Associations > dic key = *.html value = html 추가!
-if emet이 안 될 경우 설
-
-
-
 	
 	
 
