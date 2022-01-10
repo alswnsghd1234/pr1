@@ -3,6 +3,6 @@ from .models import Pruser
 # Register your models here.
 
 class PruserAdmin(admin.ModelAdmin):
-    list_display = ('username', 'password')
+    list_display = ('username','useremail', 'password')
 
 admin.site.register(Pruser, PruserAdmin)
