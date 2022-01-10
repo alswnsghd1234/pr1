@@ -71,7 +71,12 @@ html 파일이 dj로 나올 때 설정에 들어가서 파일 > Files: Associati
 if emet이 안 될 경우 설
 
 
-
+8. templates 에 register.html 작성
+	부트스트랩 사용..
+	부트스트랩 홈 > doc > css html 복붙
+	meta 부분도 헤드에 복붙
+	body 부분에 그리드를 사용하기 때문에 div class='container'사용 , row, col-12 입력
+	부트스트랩 홈> forms 에서  forms 형식 가져온다.
 	
 	
 

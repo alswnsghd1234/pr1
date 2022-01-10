@@ -15,8 +15,11 @@
                 <h1>회원가입</h1>
             </div>
         </div>
-    </div>
-    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12">
+                {{ error }}
+            </div>
+        </div>
         <div class="row mt-5">
             <div class="col-12 text-center">
             <form method="post" action="."> <!-- action에 . 은 생략가능-->
@@ -27,8 +30,7 @@
                     class="form-control" 
                     id="username" 
                     placeholder="사용자 이름"
-                    name="username"> <!-- name값 추가 설정-->
-                    
+                    name="username"/> <!-- name값 추가 설정-->
                 </div>
                 <div class="form-group">
                     <label for="password">비밀번호</label>
@@ -36,7 +38,7 @@
                     class="form-control" 
                     id="password" 
                     placeholder="비밀번호" 
-                    name="password">
+                    name="password"/>
                 </div>
                 <div class="form-group">
                     <label for="re-password">비밀번호 확인</label>
@@ -44,11 +46,10 @@
                     class="form-control" 
                     id="re-password" 
                     placeholder="비밀번호 확인" 
-                    name="re-password"
-                    />
+                    name="re-password"/>
                 </div>
                 <button type="submit" class="btn btn-primary">등록</button>
-                </form>
+            </form>
             </div>
         </div>
     </div>

@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),# 이 코딩의 의미는 admin에서 받은 url주소를 여기로 끌고 와서 url/땡땡/땡땡 이런식으로 만들 수 있게 해줌.
     path('pruser/', include('pruser.urls'))
 ]
