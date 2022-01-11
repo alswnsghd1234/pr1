@@ -1,4 +1,6 @@
-# 
+# 사용 설명서
+
+
 1. setting.py 안의
 	installed_app에 생성한 디렉토리(게시판 , 유저) 입력
 
@@ -26,14 +28,14 @@
 		def __str__(self):
 			return self.title
 			
-## verbose_name 옵션
-## 사용자가 읽기 쉬운 모델 객체의 이름으로 관리자 화면 등에서 표시된다. 영어를 기준으로 단수형이다.
+verbose_name 옵션
+사용자가 읽기 쉬운 모델 객체의 이름으로 관리자 화면 등에서 표시된다. 영어를 기준으로 단수형이다.
 
-## verbose_name 옵션을 지정하지 않으면 CamelCase 클래스 이름을 기준으로 camel case 이와 같이 모두 소문자로 변경한다.
+verbose_name 옵션을 지정하지 않으면 CamelCase 클래스 이름을 기준으로 camel case 이와 같이 모두 소문자로 변경한다.
 
 5. python manage.py makemigrations
    python manage.py migrate
-   # setting지에 있떤 앱들을 자동으로 생성!!
+   setting지에 있떤 앱들을 자동으로 생성!!
    ㄴ db.sqlite3 생성됨!! setting.py DATABASE 클래스에 상세 내용이 적혀있따!
    
     (vs code 안의 git bash로 sqlite 연결하려면
@@ -59,7 +61,7 @@
 	
 	from django.contrib import admin
 	from .models import Pruser
-	# Register your models here.
+	 Register your models here.
 
 	class PruserAdmin(admin.ModelAdmin):
 		pass
