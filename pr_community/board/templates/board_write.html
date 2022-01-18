@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block contents %}
+<div class="row mt-5">
+    <div class="col-12">
+        <form method="post" action="."> <!-- action에 . 은 생략가능-->
+            {% csrf_token %} <!-- cross dmain 방지용!! 다른 사람의 웹에서의 요청을 차단하기 위해 암호화 된 키로 알아서 생성-->
+            {% for field in form %}
+            <div class="form-group">
+                <label for="{{ field.id_for_label}}">{{ field.label}}</label>
+                <input type="{{ field.field.widget.input_type }}" class="form-control" id=""{{ field.id_for_label}}="" placeholder="{{ field.label }}" name="{{ field.name }}"/> 
+            </div>
+            {% if field.errors %}
+            <span style="color: red">{{ field.errors }}</span>
+            {% endif %}
+            {% endfor %}
+            <button type="submit" class="btn btn-primary">글쓰기</button>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}
