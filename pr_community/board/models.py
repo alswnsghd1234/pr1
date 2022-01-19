@@ -8,6 +8,7 @@ class Board(models.Model):
     contents = models.TextField(verbose_name='내용') 
     writer = models.ForeignKey('pruser.Pruser',on_delete=models.CASCADE,              # 사용자가 탈퇴하면 사용자의 모든 기록을 삭제하겠다는 코드
                                 verbose_name='작성자')    # dttm은 datetime의 약자로 사용!
+    tags = models.ManyToManyField('tag.Tag', verbose_name='태그')
     registered_dttm = models.DateTimeField(auto_now_add=True,  # auto_now_add=True 자동으로 현시간 저장! /Flask에 비해 편리
     verbose_name='등록시간')
     

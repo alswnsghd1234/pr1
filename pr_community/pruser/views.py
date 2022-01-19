@@ -10,9 +10,8 @@ def home(request):
     
     if user_id:
         pruser = Pruser.objects.get(pk=user_id)
-        return HttpResponse(pruser.username)
-    
-    return HttpResponse('Home')
+        
+    return render(request, 'home.html')
 
 def logout(request):
     if request.session.get('user'):
