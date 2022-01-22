@@ -4,15 +4,16 @@ from django.db import models
 
 class Tag(models.Model):
     name = models.CharField(max_length=32, verbose_name='태그명')
-    registered_dttm = models.DateTimeField(auto_now_add=True,
-                                        verbose_name='등록시간')
+    registered_dttm = models.DateTimeField(auto_now_add=True,  # auto_now_add=True 자동으로 현시간 저장! /Flask에 비해 편리
+    verbose_name='등록시간')
     
     def __str__(self):
-        return self.name
-    
+        return self.name # 새로 만든 유저 문구는 클래스를 문자열로 변환했을때 나오는값이지만
+                            # __str__ 이라는 내장함수를 파이썬은 갖고 있다
+
     class Meta:
-        db_table = 'project_tag'
+        db_table = 'pr1_tag' # 기본적으로 추가되는 앱들과 구분하기 위해 생성
         verbose_name = '프로젝트 태그'
-        verbose_name_plural = '프로젝트 태그'
+        verbose_name_plural = '프로젝트 태그'# 복수형도 표시되게 하는 코드
         
         
