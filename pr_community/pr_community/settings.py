@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-9-%5tzn@wnl@iqdnq&yp9dh=8=1^&d=!*h7-9t04d=!yha*ii*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
+ALLOWED_HOSTS = ['127.0.0.1',
     'alswnsghd1234.pythonanywhere.com'
 ]
 
@@ -122,6 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR,'static'), # static 파일은 css, js 보관용 디렉토리
 # ]
@@ -131,3 +132,5 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
