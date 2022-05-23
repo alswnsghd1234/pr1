@@ -93,21 +93,4 @@ if emet이 안 될 경우 설
               os.path.join(BASE_DIR,'static'), # static 파일은 css, js 보관용 디렉토리
               이런식으로.
 
-11. 잔고 안의 form 가져오기.
-
-forms.py 생성하고 클래스 임포트하기!
-
-from django import forms
-
-class LoginForm(forms.Form):
-    username = forms.CharField(max_length=32)
-    password = forms.CharField()
-
-def login(request): # 로그인 파트 부분에 인스턴트 만들고 html 에 form 전달하기
-    form = LoginForm()
-    return render(request, 'login.html', {'form':form})
-	
-html 안에 form 태그안에 html {{ form }} 넣어버리기
-
-
 	
